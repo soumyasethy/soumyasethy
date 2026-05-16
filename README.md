@@ -178,12 +178,14 @@ The open-source pieces above are a slice. Behind the `@agi-engg` wall sit ~50 pr
 ### `$ ./stats.sh`
 
 <p align="center">
-  <img height="180" src="https://github-readme-stats.vercel.app/api?username=soumyasethy&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0a0e27&title_color=00FF41&icon_color=00FF41&text_color=ffffff&count_private=true" alt="GitHub stats" />
-  <img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=soumyasethy&layout=compact&theme=tokyonight&hide_border=true&bg_color=0a0e27&title_color=00FF41&text_color=ffffff&langs_count=10" alt="Top languages" />
+  <img src="https://img.shields.io/github/stars/soumyasethy?affiliations=OWNER%2CCOLLABORATOR&style=for-the-badge&color=00FF41&labelColor=0a0e27&logo=github&logoColor=00FF41&label=stars" alt="stars" />
+  <img src="https://img.shields.io/github/followers/soumyasethy?style=for-the-badge&color=00FF41&labelColor=0a0e27&logo=github&logoColor=00FF41&label=followers" alt="followers" />
+  <img src="https://img.shields.io/badge/dynamic/json?style=for-the-badge&color=00FF41&labelColor=0a0e27&logo=github&logoColor=00FF41&label=public%20repos&query=public_repos&url=https%3A%2F%2Fapi.github.com%2Fusers%2Fsoumyasethy" alt="public repos" />
+  <img src="https://img.shields.io/badge/dynamic/json?style=for-the-badge&color=00FF41&labelColor=0a0e27&logo=github&logoColor=00FF41&label=since&query=created_at&url=https%3A%2F%2Fapi.github.com%2Fusers%2Fsoumyasethy&suffix=" alt="since" />
 </p>
 
 <p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=soumyasethy&theme=tokyonight&hide_border=true&background=0a0e27&ring=00FF41&fire=00FF41&currStreakLabel=00FF41" alt="GitHub streak" />
+  <img src="https://streak-stats.demolab.com/?user=soumyasethy&theme=tokyonight&hide_border=true&background=0a0e27&ring=00FF41&fire=00FF41&currStreakLabel=00FF41&dates=00FF41&sideNums=ffffff&sideLabels=00FF41" alt="GitHub streak" />
 </p>
 
 <p align="center">
