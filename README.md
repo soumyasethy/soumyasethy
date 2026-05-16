@@ -77,6 +77,8 @@ Today **running multiple ERPNext companies in production** on the same Frappe ba
 
 Open-source pieces from this stack live at **[@agi-engg](https://github.com/agi-engg)**.
 
+**What runs behind the wall** — the open-source pieces above are a slice. Behind the `@agi-engg` wall sit ~50 private services and apps I've architected and led: **AI pricing-intelligence** (ML-driven SKU pricing), **AI customer chatbots**, **a Customer Data Platform** (Java + Kafka + BigQuery — 360° across web · app · marketplace · OMS), **WMS extensions on top of Increff** (bulk-picking, put-away), **a 3D tech-pack tool** (fashion design-to-BOM), **warranty + return workflow apps** on ERPNext, **API gateways** with unified auth · rate-limit · observability, **shop-floor mobile apps** for MES, **an internal control-center dashboard** that's the team's single pane of glass, and **corporate web properties** (careers · policy portal · brand sites).
+
 ---
 
 ### 🧰 Range — full-stack across the journey
