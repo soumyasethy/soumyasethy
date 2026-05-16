@@ -1,15 +1,27 @@
-<h1>Soumya Sethy</h1>
-<p><b>Software architect · 0→1 product builder · full-stack. Shipping in the open since 2013.</b></p>
-<p>
-  Bangalore, India
-  · <a href="https://x.com/soumyarsethy">@soumyarsethy</a>
-  · <a href="https://medium.com/@soumyasethy">Medium</a>
-  · <a href="https://linkedin.com/in/soumyasethy">LinkedIn</a>
+<!-- ┌─────────────────────────────────────────────────────────────────────┐
+     │  Profile README for soumyasethy/soumyasethy                          │
+     │  Theme: terminal · matrix · hacker · tokyonight                       │
+     └─────────────────────────────────────────────────────────────────────┘ -->
+
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0a0e27,50:00FF41,100:0a0e27&height=200&section=header&text=Soumya%20Sethy&fontSize=70&fontColor=ffffff&animation=fadeIn&fontAlignY=38" alt="Soumya Sethy" />
+</p>
+
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=2800&pause=500&color=00FF41&center=true&vCenter=true&multiline=false&width=760&height=44&lines=software+architect+%C2%B7+0%E2%86%921+product+builder;shipping+AI-on-ERPNext+%E2%80%94+LazyChat+%2B+LazyCode;built+Shopify-class+e-com+end-to-end+on+Frappe;manufacturing+%E2%86%92+last-mile+%E2%80%94+multi-company+in+production;101-tool+MCP+server+%C2%B7+BYO+LLM+%C2%B7+open+source" alt="positioning typing" />
+</p>
+
+<p align="center">
+  <a href="https://x.com/soumyarsethy"><img src="https://img.shields.io/badge/X-@soumyarsethy-000000?style=for-the-badge&logo=x&logoColor=white&labelColor=0a0e27" alt="X"/></a>
+  <a href="https://linkedin.com/in/soumyasethy"><img src="https://img.shields.io/badge/LinkedIn-soumyasethy-0a66c2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0a0e27" alt="LinkedIn"/></a>
+  <a href="https://medium.com/@soumyasethy"><img src="https://img.shields.io/badge/Medium-@soumyasethy-12100e?style=for-the-badge&logo=medium&logoColor=white&labelColor=0a0e27" alt="Medium"/></a>
+  <img src="https://img.shields.io/badge/Bangalore-IN-00FF41?style=for-the-badge&logo=googlemaps&logoColor=white&labelColor=0a0e27" alt="Bangalore, IN"/>
+  <img src="https://komarev.com/ghpvc/?username=soumyasethy&label=profile%20views&color=00FF41&style=for-the-badge" alt="profile views"/>
 </p>
 
 ---
 
-### 🔨 What I'm building now
+### `$ ./now.sh`
 
 **[lazychat-erpnext](https://github.com/soumyasethy/lazychat-erpnext)** —
 open-source AI assistant docked into the ERPNext desk.
@@ -23,7 +35,7 @@ LazyChat helps users *work* in ERPNext, LazyCode helps developers *build* on it.
 
 ---
 
-### 🛒 Shipped — Shopify-class e-commerce, end-to-end on ERPNext
+### `$ ./shipped.sh` — Shopify-class e-commerce, end-to-end on ERPNext
 
 Architected and built a production omnichannel e-commerce stack from zero
 for a fashion / D2C brand — **manufacturing to last-mile delivery, on one ledger**.
@@ -77,11 +89,61 @@ Today **running multiple ERPNext companies in production** on the same Frappe ba
 
 Open-source pieces from this stack live at **[@agi-engg](https://github.com/agi-engg)**.
 
-**What runs behind the wall** — the open-source pieces above are a slice. Behind the `@agi-engg` wall sit ~50 private services and apps I've architected and led: **AI pricing-intelligence** (ML-driven SKU pricing), **AI customer chatbots**, **a Customer Data Platform** (Java + Kafka + BigQuery — 360° across web · app · marketplace · OMS), **WMS extensions on top of Increff** (bulk-picking, put-away), **a 3D tech-pack tool** (fashion design-to-BOM), **warranty + return workflow apps** on ERPNext, **API gateways** with unified auth · rate-limit · observability, **shop-floor mobile apps** for MES, **an internal control-center dashboard** that's the team's single pane of glass, and **corporate web properties** (careers · policy portal · brand sites).
+---
+
+### `$ ./behind-the-wall.sh`
+
+The open-source pieces above are a slice. Behind the `@agi-engg` wall sit ~50 private services and apps I've architected and led: **AI pricing-intelligence** (ML-driven SKU pricing), **AI customer chatbots**, **a Customer Data Platform** (Java + Kafka + BigQuery — 360° across web · app · marketplace · OMS), **WMS extensions on top of Increff** (bulk-picking, put-away), **a 3D tech-pack tool** (fashion design-to-BOM), **warranty + return workflow apps** on ERPNext, **API gateways** with unified auth · rate-limit · observability, **shop-floor mobile apps** for MES, **an internal control-center dashboard** that's the team's single pane of glass, and **corporate web properties** (careers · policy portal · brand sites).
 
 ---
 
-### 🧰 Range — full-stack across the journey
+### `$ ./range.sh` — full-stack across the journey
+
+<p>
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
+  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" />
+  <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
+  <img src="https://img.shields.io/badge/Tailwind-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" />
+  <img src="https://img.shields.io/badge/Storybook-FF4785?style=for-the-badge&logo=storybook&logoColor=white" />
+  <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" />
+</p>
+<p>
+  <img src="https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
+  <img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white" />
+  <img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white" />
+  <img src="https://img.shields.io/badge/Swift-FA7343?style=for-the-badge&logo=swift&logoColor=white" />
+  <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white" />
+</p>
+<p>
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" />
+  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" />
+  <img src="https://img.shields.io/badge/Frappe-0089FF?style=for-the-badge&logo=frappe&logoColor=white" />
+  <img src="https://img.shields.io/badge/Kafka-231F20?style=for-the-badge&logo=apachekafka&logoColor=white" />
+  <img src="https://img.shields.io/badge/gRPC-244c5a?style=for-the-badge&logo=grpc&logoColor=white" />
+</p>
+<p>
+  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" />
+  <img src="https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white" />
+  <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" />
+  <img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white" />
+  <img src="https://img.shields.io/badge/BigQuery-669DF6?style=for-the-badge&logo=googlebigquery&logoColor=white" />
+</p>
+<p>
+  <img src="https://img.shields.io/badge/GCP-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white" />
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
+  <img src="https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white" />
+  <img src="https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=cloudflare&logoColor=white" />
+  <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white" />
+</p>
+<p>
+  <img src="https://img.shields.io/badge/Anthropic-191919?style=for-the-badge&logo=anthropic&logoColor=white" />
+  <img src="https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white" />
+  <img src="https://img.shields.io/badge/MCP-00FF41?style=for-the-badge&logo=modelcontextprotocol&logoColor=black&labelColor=0a0e27" />
+  <img src="https://img.shields.io/badge/Shopify_Plus-7AB55C?style=for-the-badge&logo=shopify&logoColor=white" />
+  <img src="https://img.shields.io/badge/ERPNext-0089FF?style=for-the-badge&logo=frappe&logoColor=white" />
+</p>
 
 <table>
 <tr><td><b>Business</b></td><td>P2P · O2C · R2R · OMS · WMS · PIM · PLM · MES · Marketplace listings · Traceability & serialization · GST / e-Waybill compliance · D2C platforms (Shopify Plus · Gokwik · Return Prime · Increff WMS/OMS/CIMS/ICC)</td></tr>
@@ -96,7 +158,7 @@ Open-source pieces from this stack live at **[@agi-engg](https://github.com/agi-
 
 ---
 
-### 🧭 How I got here
+### `$ ./journey.log`
 
 ```
 2013     Started on Android. CS algorithms — Splitwise CashFlow (15★).
@@ -113,10 +175,33 @@ Open-source pieces from this stack live at **[@agi-engg](https://github.com/agi-
 
 ---
 
-### 📬 Let's talk
+### `$ ./stats.sh`
 
-If you run an ERPNext shop and want AI on top — start with
-[lazychat-erpnext](https://github.com/soumyasethy/lazychat-erpnext).
-If you're building a 0→1 product and need a software architect or technical co-founder —
-[DMs open on X](https://x.com/soumyarsethy) ·
-[LinkedIn](https://linkedin.com/in/soumyasethy).
+<p align="center">
+  <img height="180" src="https://github-readme-stats.vercel.app/api?username=soumyasethy&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0a0e27&title_color=00FF41&icon_color=00FF41&text_color=ffffff&count_private=true" alt="GitHub stats" />
+  <img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=soumyasethy&layout=compact&theme=tokyonight&hide_border=true&bg_color=0a0e27&title_color=00FF41&text_color=ffffff&langs_count=10" alt="Top languages" />
+</p>
+
+<p align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=soumyasethy&theme=tokyonight&hide_border=true&background=0a0e27&ring=00FF41&fire=00FF41&currStreakLabel=00FF41" alt="GitHub streak" />
+</p>
+
+<p align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=soumyasethy&theme=matrix&no-frame=true&no-bg=true&row=1&column=7&margin-w=8" alt="GitHub trophies" />
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/soumyasethy/soumyasethy/output/github-contribution-grid-snake-dark.svg" alt="Snake contribution graph" />
+</p>
+
+---
+
+### `$ ./contact.sh`
+
+If you run an **ERPNext shop** and want AI on top — start with [lazychat-erpnext](https://github.com/soumyasethy/lazychat-erpnext).
+If you're building a **0→1 product** and need a software architect or technical co-founder —
+[DMs open on X](https://x.com/soumyarsethy) · [LinkedIn](https://linkedin.com/in/soumyasethy).
+
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0a0e27,50:00FF41,100:0a0e27&height=120&section=footer" alt="footer" />
+</p>
