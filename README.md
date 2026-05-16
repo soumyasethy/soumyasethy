@@ -181,7 +181,7 @@ The open-source pieces above are a slice. Behind the `@agi-engg` wall sit ~50 pr
   <img src="https://img.shields.io/github/stars/soumyasethy?affiliations=OWNER%2CCOLLABORATOR&style=for-the-badge&color=00FF41&labelColor=0a0e27&logo=github&logoColor=00FF41&label=stars" alt="stars" />
   <img src="https://img.shields.io/github/followers/soumyasethy?style=for-the-badge&color=00FF41&labelColor=0a0e27&logo=github&logoColor=00FF41&label=followers" alt="followers" />
   <img src="https://img.shields.io/badge/dynamic/json?style=for-the-badge&color=00FF41&labelColor=0a0e27&logo=github&logoColor=00FF41&label=public%20repos&query=public_repos&url=https%3A%2F%2Fapi.github.com%2Fusers%2Fsoumyasethy" alt="public repos" />
-  <img src="https://img.shields.io/badge/dynamic/json?style=for-the-badge&color=00FF41&labelColor=0a0e27&logo=github&logoColor=00FF41&label=since&query=created_at&url=https%3A%2F%2Fapi.github.com%2Fusers%2Fsoumyasethy&suffix=" alt="since" />
+  <img src="https://img.shields.io/badge/since-2013-00FF41?style=for-the-badge&labelColor=0a0e27&logo=github&logoColor=00FF41" alt="since 2013" />
 </p>
 
 <p align="center">
