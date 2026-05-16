@@ -26,9 +26,9 @@ The architecture separates Master Data, Transactions, and Financial R2R into thr
   <img src=".github/assets/erp-architecture.svg" alt="ERP architecture — Master Data, Transactions, R2R" width="100%"/>
 </p>
 
-Live integrations run through a Java-based middleware platform I architected — connectors, retry, idempotency, audit trail — sitting between ERPNext and the operating world. It wires ERPNext to **e-Waybill** (Indian goods-movement compliance), **Shiprocket + Cargofl** (last-mile delivery aggregators), **GSTR-1** (statutory returns automation), **EAN barcoding** for traceability and serialization, and **five-bank H2H banking** — ICICI, HDFC, AXIS, YES, Kotak Mahindra — via [india-banking](https://github.com/agi-engg/india-banking) on Frappe. On the D2C ecosystem side, integrations include **Shopify Plus**, **Gokwik** (one-click checkout), and **Return Prime** (returns management). Full-ecosystem fluency with **Increff** covers WMS, OMS, CIMS, ICC, reports, and tech operations.
+Live integrations run through a Java-based integration platform I architected — not a single middleware service, but a four-tier system: an **ETL layer** that ingests from ERPNext, marketplaces and channel-partner APIs; a **workflow / data plane** that runs orchestrated jobs with idempotency, retry and audit trail end-to-end; an **API gateway** with unified auth, rate-limit and observability fronting every downstream consumer; and a **control-plane UI** where operations teams inspect runs, replay events and manage connector state. The platform wires ERPNext to **e-Waybill** (Indian goods-movement compliance), **Shiprocket + Cargofl** (last-mile delivery aggregators), **GSTR-1** (statutory returns automation), **EAN barcoding** for traceability and serialization, and **five-bank H2H banking** — ICICI, HDFC, AXIS, YES, Kotak Mahindra — via [india-banking](https://github.com/agi-engg/india-banking) on Frappe. On the D2C ecosystem side, integrations include **Shopify Plus**, **Gokwik** (one-click checkout), and **Return Prime** (returns management). Full-ecosystem fluency with **Increff** covers WMS, OMS, CIMS, ICC, reports, and tech operations.
 
-Stack: React + TypeScript + Tailwind + Vite + Storybook for the storefront; React Native and Flutter for companion mobile apps; Frappe/ERPNext (Python) with Java microservices, Node BFFs, and Kafka on the backend; PostgreSQL, MariaDB, Redis, and BigQuery for data; GCP, Docker, GitHub Actions, and Cloudflare for infrastructure.
+Stack: React + TypeScript + Tailwind + Vite + Storybook for the storefront; React Native and Flutter for companion mobile apps; Frappe/ERPNext (Python) with Java microservices, Node BFFs and Kafka on the backend; PostgreSQL, MariaDB, Redis and BigQuery for data. Infrastructure runs on GCP — Compute, VPC with load balancers, Cloud DNS, Cloud Storage — fronted by Nginx and Cloudflare, with GitHub Actions CI/CD across both the storefront and the integration platform. Multi-tenant deployments: multiple ERPNext companies share infra with isolated data.
 
 ---
 
@@ -67,9 +67,15 @@ The mobile era. React Native from scratch inside existing Android apps with auto
 
 Shifted up the stack — design systems at Figma-class scope, widgetized JSON-driven UIs, micro-frontend architectures, internal low-code tooling. Built component libraries that powered multiple downstream apps and a design platform layer that let product teams compose UIs from declarative JSON without writing React.
 
-### 2023–2025 — Production e-commerce on ERPNext
+### 2023–2025 — Production e-commerce, backend platform, DevOps
 
-Built a Shopify-class omnichannel e-commerce stack from zero on ERPNext for a fashion D2C brand. Manufacturing through last-mile delivery, all reconciled to one ledger. P2P, O2C and R2R wired into one source of truth. The Java middleware platform I architected wires e-Waybill, Shiprocket + Cargofl, GSTR-1, Increff (WMS/OMS/CIMS/ICC) and five Indian banks (ICICI · HDFC · AXIS · YES · Kotak Mahindra) — with idempotency, retry and audit trail end-to-end. Multiple ERPNext companies run in production on the same Frappe backbone today.
+Built a Shopify-class omnichannel e-commerce stack from zero on ERPNext for a fashion D2C brand. Manufacturing through last-mile delivery, all reconciled to one ledger. P2P, O2C and R2R wired into one source of truth.
+
+The Java integration platform I architected for this stack is a four-tier system, not a single middleware: an **ETL layer** pulling from ERPNext, marketplaces and channel-partner APIs; a **workflow / data plane** that runs orchestrated jobs with idempotency, retry and end-to-end audit trail; an **API gateway** with unified auth, rate-limit and observability fronting downstream consumers; and a **control-plane UI** where ops teams inspect runs, replay events, and manage connector state. The platform wires e-Waybill, Shiprocket + Cargofl, GSTR-1, Increff (WMS/OMS/CIMS/ICC), five Indian banks (ICICI · HDFC · AXIS · YES · Kotak Mahindra), Shopify Plus, Gokwik, and Return Prime.
+
+Alongside the integration platform: a Java + Kafka + BigQuery **Customer Data Platform** unifying a 360° view across web, app, marketplace and OMS. ETL data pipelines (cron + GCS + OneDrive sync) for finance and ops reporting. Internal **control-center dashboards** giving the team a single pane of glass across the stack. Microservices for payments, auth, user-data and material catalogue. WMS extensions on top of Increff (bulk-picking, put-away) for shop-floor speed. Shop-floor mobile apps for MES.
+
+DevOps and infrastructure: GCP-native — Compute, VPC with load balancers, Cloud DNS, Cloud Storage, AI Studio — fronted by Nginx and Cloudflare. GitHub Actions CI/CD across storefront, mobile apps and the integration platform. Multi-tenant deployments where multiple ERPNext companies run on the same Frappe backbone with isolated data and shared infra. Production today.
 
 ### 2025–present — AI-on-ERPNext
 
