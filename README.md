@@ -38,9 +38,42 @@ The open-source pieces above are a slice. Behind the [@agi-engg](https://github.
 
 ---
 
+## Stack
+
+<table>
+<tr><td><b>Business</b></td><td>P2P · O2C · R2R · OMS · WMS · PIM · PLM · MES · Marketplace listings · Traceability & serialization · GST / e-Waybill compliance · D2C platforms (Shopify Plus · Gokwik · Return Prime · Increff WMS/OMS/CIMS/ICC)</td></tr>
+<tr><td><b>Frontend</b></td><td>React · Next.js · Vite · TypeScript · Tailwind · Storybook · React Native Web · micro-frontends · widgetized JSON UIs (Figma-class design platforms) · Figma</td></tr>
+<tr><td><b>Mobile</b></td><td>React Native · Flutter · Native Android (Java / Kotlin / Android Studio) · iOS (Swift / Xcode) · Google Play & App Store releases</td></tr>
+<tr><td><b>Backend</b></td><td>Python · Java · Node.js · Frappe · Kafka · gRPC · REST · shell scripts</td></tr>
+<tr><td><b>Data</b></td><td>PostgreSQL · MariaDB · MySQL · Redis · BigQuery · Google Cloud Storage</td></tr>
+<tr><td><b>Infrastructure</b></td><td>GCP (Compute · VPC · Load Balancers · Cloud DNS · GCS · AI Studio) · Docker · Nginx · GitHub Actions CI/CD · Cloudflare · GoDaddy DNS · Supervisor / systemd</td></tr>
+<tr><td><b>Growth & analytics</b></td><td>Google Analytics · Google Ads · MoEngage · NPM publishing</td></tr>
+<tr><td><b>AI & automation</b></td><td>MCP servers · Anthropic · OpenAI-compatible · BYO-LLM patterns · vision-judge loops · workflow automation · AI chatbot product (LazyChat) · AI coding agent (LazyCode)</td></tr>
+</table>
+
+---
+
 ## Journey
 
-Started on Android in 2013, with CS algorithm work that produced a Splitwise CashFlow implementation (15★). Through 2017–2020, the mobile era — React Native from scratch, Flutter clones (Inshorts, 8★). From 2020 to 2023, frontend platforms: widgetized JSON UIs, micro-frontends, design systems at Figma-class scope. From 2023 to 2025, the Shopify-class e-commerce build on ERPNext, with Java middleware live across e-Waybill, Shiprocket + Cargofl, GSTR-1, Increff, and five banks; multi-company in production. From 2025 onward, AI-on-ERPNext — LazyChat (101-tool MCP, BYO LLM) and LazyCode.
+### 2013–2017 — Android and CS fundamentals
+
+Started on Android in 2013, building consumer apps end-to-end. CS algorithm work in this era produced [ShortestPath-CashFlow-Algorithm-Splitwise](https://github.com/soumyasethy/ShortestPath-CashFlow-Algorithm-Splitwise), an implementation of debt-minimisation across a graph of borrowers — still my most-starred OSS repo (15★, 10 forks). A handful of supporting libraries shipped alongside: extended layout managers, locked scroll views, and shared-preferences wrappers for Android teams to drop into existing apps.
+
+### 2017–2020 — Mobile platforms
+
+The mobile era. React Native from scratch inside existing Android apps with auto-linking, OTA updates and Firebase wired in production. A Flutter clone of [Inshorts](https://github.com/soumyasethy/flutter-inshorts-clone-newsly) (8★) shipped with native Chrome Tabs on Android and Safari View Controller on iOS for in-app web. The work here was as much about platform setup discipline — release pipelines, code-push flows, native bridges — as about the apps themselves.
+
+### 2020–2023 — Frontend platforms
+
+Shifted up the stack — design systems at Figma-class scope, widgetized JSON-driven UIs, micro-frontend architectures, internal low-code tooling. Built component libraries that powered multiple downstream apps and a design platform layer that let product teams compose UIs from declarative JSON without writing React.
+
+### 2023–2025 — Production e-commerce on ERPNext
+
+Built a Shopify-class omnichannel e-commerce stack from zero on ERPNext for a fashion D2C brand. Manufacturing through last-mile delivery, all reconciled to one ledger. P2P, O2C and R2R wired into one source of truth. The Java middleware platform I architected wires e-Waybill, Shiprocket + Cargofl, GSTR-1, Increff (WMS/OMS/CIMS/ICC) and five Indian banks (ICICI · HDFC · AXIS · YES · Kotak Mahindra) — with idempotency, retry and audit trail end-to-end. Multiple ERPNext companies run in production on the same Frappe backbone today.
+
+### 2025–present — AI-on-ERPNext
+
+Building AI-native tooling on top of the ERPNext stack I run. [LazyChat](https://github.com/soumyasethy/lazychat-erpnext) — open-source AI assistant docked into the ERPNext desk, 101-tool MCP server, bring-your-own LLM (any OpenAI-compatible or Anthropic key stays in your browser), Apply-gated mutations, vision-judge self-iteration. **LazyCode.in** — AI coding agent for Frappe and ERPNext apps (private beta). The first AI-native sidekicks for the Frappe ecosystem.
 
 ---
 
