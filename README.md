@@ -38,6 +38,20 @@ The open-source pieces above are a slice. Behind the [@agi-engg](https://github.
 
 ---
 
+## ERPNext — frontend, backend, DevOps, tech ops
+
+I run ERPNext in production across multiple companies — not a tutorial install, but a multi-tenant Frappe backbone serving live e-commerce traffic. Depth across all four layers:
+
+**Frontend.** Custom Frappe Desk extensions; embedded React apps via iframe (the pattern [lazychat-erpnext](https://github.com/soumyasethy/lazychat-erpnext) uses to dock into the Desk); DocType form scripts, dashboard charts, custom print formats, workspace customizations; client-side hooks for conditional fields, dynamic linking and validation; bench app bundles built and shipped via `bench build` + `app_include_js / app_include_css`.
+
+**Backend.** Custom Frappe apps using the full DocType + Server Script + Hooks pattern. `@frappe.whitelist` API methods for external integration (lazychat alone exposes 101 of them). Document lifecycle hooks (`before_save`, `on_submit`, `before_cancel`, `on_trash`) driving downstream events. Background workers, scheduled jobs, queued events for long-running ETL. Multi-app dependency management across an evolving bench.
+
+**DevOps.** `frappe-docker` production setup, multi-tenant bench architecture where multiple companies share infra with isolated data, GitHub Actions CI/CD for Frappe apps (test runners, app builds, deploy), version-upgrade workflows that survive ERPNext v13 → v14 → v15, automated DB backup / restore / migration, Nginx + Cloudflare in front of Frappe, Supervisor (or systemd on dev macOS) for process management, observability via Frappe's Error Log + custom log shippers.
+
+**Tech ops.** Production support for live e-commerce traffic on the same backbone. Custom reports and dashboards for finance, ops, warehouse and growth teams. Role-based permissions and workflow approval flows. Cache and scheduler tuning, log rotation, queue depth monitoring. Daily reconciliation between ERPNext and external systems — Increff WMS, the five Indian banks, marketplace channels, payment gateways. Error monitoring, incident response, RCA discipline.
+
+---
+
 ## Stack
 
 <table>
