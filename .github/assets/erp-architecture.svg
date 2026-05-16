@@ -1,0 +1,296 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 963" width="860" height="963" font-family="ui-sans-serif, system-ui, -apple-system, 'DM Sans', sans-serif" role="img">
+  <title>ERP Architecture: Master Data, Transaction, and Financial Layers</title>
+  <desc>Three-layer diagram: Master Data; Transaction layer with P2P, O2C B2B, and D2C/marketplaces; Returns; Financial R2R.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <style>
+      .th { font-size: 14px; font-weight: 500; fill: #0f0f0e; }
+      .ts { font-size: 12px; font-weight: 400; fill: #3d3c38; }
+      .band-label { fill: #0f0f0e; font-weight: 600; font-size: 11px; }
+      .arr { stroke: rgba(0,0,0,0.5); stroke-width: 2; fill: none; }
+      .leader { stroke: rgba(0,0,0,0.38); stroke-width: 1; stroke-dasharray: 3 3; fill: none; }
+      .c-purple-fill { fill: #EEEDFE; }
+      .c-purple-stroke { stroke: #534AB7; }
+      .c-purple-th { fill: #3C3489; }
+      .c-purple-ts { fill: #534AB7; }
+      .c-teal-fill { fill: #E1F5EE; }
+      .c-teal-stroke { stroke: #0F6E56; }
+      .c-teal-th { fill: #085041; }
+      .c-teal-ts { fill: #0F6E56; }
+      .c-coral-fill { fill: #FAECE7; }
+      .c-coral-stroke { stroke: #993C1D; }
+      .c-coral-th { fill: #712B13; }
+      .c-coral-ts { fill: #993C1D; }
+      .c-d2c-fill { fill: #E8EEF9; }
+      .c-d2c-stroke { stroke: #2E5077; }
+      .c-d2c-th { fill: #1a3352; }
+      .c-d2c-ts { fill: #2E5077; }
+      .c-gray-fill { fill: #F1EFE8; }
+      .c-gray-stroke { stroke: #5F5E5A; }
+      .c-gray-th { fill: #444441; }
+      .c-gray-ts { fill: #5F5E5A; }
+    </style>
+  </defs>
+
+  <!-- Title -->
+  <text x="430" y="20" text-anchor="middle" font-size="16" font-weight="600" fill="#0f0f0e">ERP architecture — Master Data · Transactions · R2R</text>
+
+  <!-- LAYER 1 — MASTER DATA -->
+  <rect x="28" y="30" width="808" height="176" rx="14" fill="none" stroke="rgba(0,0,0,0.38)" stroke-width="1.15" stroke-dasharray="5 3"/>
+  <text class="th" x="432" y="52" text-anchor="middle">1 · Master data layer</text>
+  <text class="ts" x="432" y="68" text-anchor="middle" style="opacity:.9">Sync — source of truth for all entities</text>
+
+  <!-- Master row 1 -->
+  <g>
+    <rect x="44" y="84" width="232" height="50" rx="8" class="c-purple-fill c-purple-stroke" stroke-width="1.15"/>
+    <text class="th c-purple-th" x="160" y="106" text-anchor="middle">Item master</text>
+    <text class="ts c-purple-ts" x="160" y="124" text-anchor="middle">Articles &amp; SKUs</text>
+  </g>
+  <g>
+    <rect x="304" y="84" width="232" height="50" rx="8" class="c-purple-fill c-purple-stroke" stroke-width="1.15"/>
+    <text class="th c-purple-th" x="420" y="106" text-anchor="middle">Supplier master</text>
+    <text class="ts c-purple-ts" x="420" y="124" text-anchor="middle">Vendor profiles</text>
+  </g>
+  <g>
+    <rect x="564" y="84" width="232" height="50" rx="8" class="c-purple-fill c-purple-stroke" stroke-width="1.15"/>
+    <text class="th c-purple-th" x="680" y="106" text-anchor="middle">Customer master</text>
+    <text class="ts c-purple-ts" x="680" y="124" text-anchor="middle">Account profiles</text>
+  </g>
+
+  <!-- Master row 2 -->
+  <g>
+    <rect x="44" y="142" width="232" height="50" rx="8" class="c-purple-fill c-purple-stroke" stroke-width="1.15"/>
+    <text class="th c-purple-th" x="160" y="164" text-anchor="middle">Supplier location</text>
+    <text class="ts c-purple-ts" x="160" y="182" text-anchor="middle">Ship-from sites</text>
+  </g>
+  <g>
+    <rect x="304" y="142" width="232" height="50" rx="8" class="c-purple-fill c-purple-stroke" stroke-width="1.15"/>
+    <text class="th c-purple-th" x="420" y="164" text-anchor="middle">Customer location</text>
+    <text class="ts c-purple-ts" x="420" y="182" text-anchor="middle">Ship-to sites</text>
+  </g>
+  <g>
+    <rect x="564" y="142" width="232" height="50" rx="8" class="c-purple-fill c-purple-stroke" stroke-width="1.15"/>
+    <text class="th c-purple-th" x="680" y="162" text-anchor="middle">Warehouse locations master</text>
+    <text class="ts c-purple-ts" x="680" y="182" text-anchor="middle" style="font-size:11px">Purchase Order — Location Code</text>
+  </g>
+
+  <!-- Sync down arrows -->
+  <line x1="290" y1="206" x2="290" y2="220" class="arr" marker-end="url(#arrow)"/>
+  <line x1="550" y1="206" x2="550" y2="220" class="arr" marker-end="url(#arrow)"/>
+
+  <!-- LAYER 2 — TRANSACTIONS -->
+  <rect x="28" y="220" width="808" height="312" rx="14" fill="none" stroke="rgba(0,0,0,0.38)" stroke-width="1.15" stroke-dasharray="5 3"/>
+  <text class="th" x="432" y="242" text-anchor="middle">2 · Transaction layer (Forward order flow)</text>
+
+  <!-- Column band labels -->
+  <rect x="40" y="254" width="252" height="24" rx="6" fill="none" stroke="rgba(0,0,0,0.24)" stroke-width="1.15"/>
+  <text class="band-label" x="166" y="270" text-anchor="middle">Procure to Pay (P2P) — inward</text>
+  <rect x="306" y="254" width="252" height="24" rx="6" fill="none" stroke="rgba(0,0,0,0.24)" stroke-width="1.15"/>
+  <text class="band-label" x="432" y="270" text-anchor="middle">Order to Cash (O2C) — B2B (outward)</text>
+  <rect x="572" y="254" width="252" height="24" rx="6" fill="none" stroke="rgba(0,0,0,0.24)" stroke-width="1.15"/>
+  <text class="band-label" x="698" y="270" text-anchor="middle">O2C — D2C &amp; marketplaces (outward)</text>
+
+  <!-- P2P nodes -->
+  <g>
+    <rect x="40" y="287" width="252" height="44" rx="8" class="c-teal-fill c-teal-stroke" stroke-width="1.15"/>
+    <text class="th c-teal-th" x="166" y="307" text-anchor="middle">Purchase order</text>
+    <text class="ts c-teal-ts" x="166" y="323" text-anchor="middle">ERPNext → OMS Sync</text>
+  </g>
+  <line x1="166" y1="331" x2="166" y2="345" class="arr" marker-end="url(#arrow)"/>
+  <g>
+    <rect x="40" y="345" width="252" height="44" rx="8" class="c-teal-fill c-teal-stroke" stroke-width="1.15"/>
+    <text class="th c-teal-th" x="166" y="365" text-anchor="middle">Goods receipt (GRN)</text>
+    <text class="ts c-teal-ts" x="166" y="381" text-anchor="middle">WMS — inbound scan</text>
+  </g>
+  <line x1="166" y1="389" x2="166" y2="403" class="arr" marker-end="url(#arrow)"/>
+  <g>
+    <rect x="40" y="403" width="252" height="44" rx="8" class="c-teal-fill c-teal-stroke" stroke-width="1.15"/>
+    <text class="th c-teal-th" x="166" y="423" text-anchor="middle">Purchase receipt</text>
+    <text class="ts c-teal-ts" x="166" y="439" text-anchor="middle">ERPNext — stock entry</text>
+  </g>
+  <line x1="166" y1="447" x2="166" y2="461" class="arr" marker-end="url(#arrow)"/>
+  <g>
+    <rect x="40" y="461" width="252" height="44" rx="8" class="c-teal-fill c-teal-stroke" stroke-width="1.15"/>
+    <text class="th c-teal-th" x="166" y="481" text-anchor="middle">Purchase invoice</text>
+    <text class="ts c-teal-ts" x="166" y="497" text-anchor="middle">ERPNext</text>
+  </g>
+
+  <!-- O2C B2B -->
+  <g>
+    <rect x="306" y="287" width="252" height="44" rx="8" class="c-coral-fill c-coral-stroke" stroke-width="1.15"/>
+    <text class="th c-coral-th" x="432" y="307" text-anchor="middle">Sales order</text>
+    <text class="ts c-coral-ts" x="432" y="323" text-anchor="middle">ERPNext</text>
+  </g>
+  <line x1="432" y1="331" x2="432" y2="345" class="arr" marker-end="url(#arrow)"/>
+  <g>
+    <rect x="306" y="345" width="252" height="44" rx="8" class="c-coral-fill c-coral-stroke" stroke-width="1.15"/>
+    <text class="th c-coral-th" x="432" y="365" text-anchor="middle">Shipment (Pack Order)</text>
+    <text class="ts c-coral-ts" x="432" y="381" text-anchor="middle">WMS / 3PL — pick, pack, dispatch</text>
+  </g>
+  <line x1="432" y1="389" x2="432" y2="403" class="arr" marker-end="url(#arrow)"/>
+  <g>
+    <rect x="306" y="403" width="252" height="44" rx="8" class="c-coral-fill c-coral-stroke" stroke-width="1.15"/>
+    <text class="th c-coral-th" x="432" y="423" text-anchor="middle">Delivery note</text>
+    <text class="ts c-coral-ts" x="432" y="439" text-anchor="middle">ERPNext</text>
+  </g>
+  <line x1="432" y1="447" x2="432" y2="461" class="arr" marker-end="url(#arrow)"/>
+  <g>
+    <rect x="306" y="461" width="252" height="44" rx="8" class="c-coral-fill c-coral-stroke" stroke-width="1.15"/>
+    <text class="th c-coral-th" x="432" y="481" text-anchor="middle">Sales invoice</text>
+    <text class="ts c-coral-ts" x="432" y="497" text-anchor="middle">ERPNext</text>
+  </g>
+
+  <!-- O2C D2C -->
+  <g>
+    <rect x="572" y="287" width="252" height="44" rx="8" class="c-d2c-fill c-d2c-stroke" stroke-width="1.15"/>
+    <text class="th c-d2c-th" x="698" y="307" text-anchor="middle">D2C &amp; marketplaces</text>
+    <text class="ts c-d2c-ts" x="698" y="323" text-anchor="middle" style="font-size:11px">OMS — Channel Orders</text>
+  </g>
+  <line x1="698" y1="331" x2="698" y2="345" class="arr" marker-end="url(#arrow)"/>
+  <g>
+    <rect x="572" y="345" width="252" height="44" rx="8" class="c-d2c-fill c-d2c-stroke" stroke-width="1.15"/>
+    <text class="th c-d2c-th" x="698" y="365" text-anchor="middle">Shipment (AWB Tracking)</text>
+    <text class="ts c-d2c-ts" x="698" y="381" text-anchor="middle">WMS / 3PL — pick, pack, dispatch</text>
+  </g>
+  <line x1="698" y1="389" x2="698" y2="403" class="arr" marker-end="url(#arrow)"/>
+  <g>
+    <rect x="572" y="403" width="252" height="44" rx="8" class="c-d2c-fill c-d2c-stroke" stroke-width="1.15"/>
+    <text class="th c-d2c-th" x="698" y="423" text-anchor="middle">Sales invoice</text>
+    <text class="ts c-d2c-ts" x="698" y="439" text-anchor="middle" style="font-size:11px">ERPNext — OUTWARD_ORDER_COMPLETE</text>
+  </g>
+
+  <!-- Column dividers -->
+  <line x1="299" y1="252" x2="299" y2="532" stroke="rgba(0,0,0,0.38)" stroke-width="1.25" stroke-dasharray="3 4"/>
+  <line x1="565" y1="282" x2="565" y2="522" stroke="rgba(0,0,0,0.24)" stroke-width="1" stroke-dasharray="2 4"/>
+
+  <!-- Forward → Return arrows -->
+  <line x1="166" y1="532" x2="166" y2="542" class="arr" marker-end="url(#arrow)"/>
+  <line x1="432" y1="532" x2="432" y2="542" class="arr" marker-end="url(#arrow)"/>
+  <line x1="698" y1="532" x2="698" y2="542" class="arr" marker-end="url(#arrow)"/>
+
+  <!-- LAYER 2b — RETURN FLOW -->
+  <rect x="28" y="544" width="808" height="241" rx="14" fill="none" stroke="rgba(0,0,0,0.38)" stroke-width="1.15" stroke-dasharray="5 3"/>
+  <text class="th" x="432" y="566" text-anchor="middle">Transaction layer (Return order flow)</text>
+
+  <!-- Return band labels -->
+  <rect x="40" y="576" width="185" height="24" rx="6" fill="none" stroke="rgba(0,0,0,0.24)" stroke-width="1.15"/>
+  <text class="band-label" x="132" y="592" text-anchor="middle">B2B — Supplier Return</text>
+  <rect x="237" y="576" width="185" height="24" rx="6" fill="none" stroke="rgba(0,0,0,0.24)" stroke-width="1.15"/>
+  <text class="band-label" x="329" y="592" text-anchor="middle">B2B — Customer Return</text>
+  <rect x="434" y="576" width="185" height="24" rx="6" fill="none" stroke="rgba(0,0,0,0.24)" stroke-width="1.15"/>
+  <text class="band-label" x="526" y="592" text-anchor="middle">D2C — Return (outward credit)</text>
+  <rect x="631" y="576" width="185" height="24" rx="6" fill="none" stroke="rgba(0,0,0,0.24)" stroke-width="1.15"/>
+  <text class="band-label" x="723" y="592" text-anchor="middle">Marketplace — Return</text>
+
+  <!-- Supplier return -->
+  <g>
+    <rect x="40" y="609" width="185" height="44" rx="8" class="c-teal-fill c-teal-stroke" stroke-width="1.15"/>
+    <text class="th c-teal-th" x="132" y="629" text-anchor="middle" style="font-size:13px">Purchase Receipt Return</text>
+    <text class="ts c-teal-ts" x="132" y="645" text-anchor="middle">ERPNext</text>
+  </g>
+  <line x1="132" y1="653" x2="132" y2="667" class="arr" marker-end="url(#arrow)"/>
+  <g>
+    <rect x="40" y="667" width="185" height="44" rx="8" class="c-teal-fill c-teal-stroke" stroke-width="1.15"/>
+    <text class="th c-teal-th" x="132" y="687" text-anchor="middle" style="font-size:11px">Purchase Invoice (isReturn=true)</text>
+    <text class="ts c-teal-ts" x="132" y="703" text-anchor="middle" style="font-size:11px">ERPNext — Debit Note</text>
+  </g>
+
+  <!-- Customer return B2B -->
+  <g>
+    <rect x="237" y="609" width="185" height="44" rx="8" class="c-coral-fill c-coral-stroke" stroke-width="1.15"/>
+    <text class="th c-coral-th" x="329" y="629" text-anchor="middle" style="font-size:13px">Serial No. FIFO Matching</text>
+    <text class="ts c-coral-ts" x="329" y="645" text-anchor="middle">ERPNext</text>
+  </g>
+  <line x1="329" y1="653" x2="329" y2="667" class="arr" marker-end="url(#arrow)"/>
+  <g>
+    <rect x="237" y="667" width="185" height="44" rx="8" class="c-coral-fill c-coral-stroke" stroke-width="1.15"/>
+    <text class="th c-coral-th" x="329" y="687" text-anchor="middle" style="font-size:12px">Delivery note (isReturn=true)</text>
+    <text class="ts c-coral-ts" x="329" y="703" text-anchor="middle">ERPNext</text>
+  </g>
+  <line x1="329" y1="711" x2="329" y2="725" class="arr" marker-end="url(#arrow)"/>
+  <g>
+    <rect x="237" y="725" width="185" height="44" rx="8" class="c-coral-fill c-coral-stroke" stroke-width="1.15"/>
+    <text class="th c-coral-th" x="329" y="745" text-anchor="middle" style="font-size:12px">Sales Invoice (isReturn=true)</text>
+    <text class="ts c-coral-ts" x="329" y="761" text-anchor="middle" style="font-size:11px">ERPNext — Credit Note</text>
+  </g>
+
+  <!-- D2C return -->
+  <g>
+    <rect x="434" y="609" width="185" height="44" rx="8" class="c-d2c-fill c-d2c-stroke" stroke-width="1.15"/>
+    <text class="th c-d2c-th" x="526" y="629" text-anchor="middle" style="font-size:13px">Return from Channel</text>
+    <text class="ts c-d2c-ts" x="526" y="645" text-anchor="middle" style="font-size:11px">OMS — CUSTOMER_RETURN event</text>
+  </g>
+  <line x1="526" y1="653" x2="526" y2="667" class="arr" marker-end="url(#arrow)"/>
+  <g>
+    <rect x="434" y="667" width="185" height="44" rx="8" class="c-d2c-fill c-d2c-stroke" stroke-width="1.15"/>
+    <text class="th c-d2c-th" x="526" y="687" text-anchor="middle" style="font-size:12px">Sales Invoice (isReturn=true)</text>
+    <text class="ts c-d2c-ts" x="526" y="703" text-anchor="middle" style="font-size:11px">ERPNext — Credit Note</text>
+  </g>
+
+  <!-- Marketplace return -->
+  <g>
+    <rect x="631" y="609" width="185" height="44" rx="8" class="c-coral-fill c-coral-stroke" stroke-width="1.15"/>
+    <text class="th c-coral-th" x="723" y="629" text-anchor="middle" style="font-size:13px">Return from Marketplace</text>
+    <text class="ts c-coral-ts" x="723" y="645" text-anchor="middle" style="font-size:11px">OMS — return-order API</text>
+  </g>
+  <line x1="723" y1="653" x2="723" y2="667" class="arr" marker-end="url(#arrow)"/>
+  <g>
+    <rect x="631" y="667" width="185" height="44" rx="8" class="c-coral-fill c-coral-stroke" stroke-width="1.15"/>
+    <text class="th c-coral-th" x="723" y="687" text-anchor="middle" style="font-size:12px">Sales Invoice (isReturn=true)</text>
+    <text class="ts c-coral-ts" x="723" y="703" text-anchor="middle" style="font-size:11px">ERPNext — Credit Note</text>
+  </g>
+
+  <!-- Return column dividers -->
+  <line x1="232" y1="574" x2="232" y2="783" stroke="rgba(0,0,0,0.38)" stroke-width="1.25" stroke-dasharray="3 4"/>
+  <line x1="429" y1="574" x2="429" y2="783" stroke="rgba(0,0,0,0.38)" stroke-width="1.25" stroke-dasharray="3 4"/>
+  <line x1="626" y1="574" x2="626" y2="783" stroke="rgba(0,0,0,0.24)" stroke-width="1" stroke-dasharray="2 4"/>
+
+  <!-- Return → R2R connectors -->
+  <line x1="132" y1="711" x2="132" y2="799" class="arr" marker-end="url(#arrow)"/>
+  <line x1="329" y1="769" x2="329" y2="799" class="arr" marker-end="url(#arrow)"/>
+  <line x1="526" y1="711" x2="526" y2="799" class="arr" stroke-dasharray="6 4" marker-end="url(#arrow)"/>
+  <line x1="723" y1="711" x2="723" y2="799" class="arr" stroke-dasharray="6 4" marker-end="url(#arrow)"/>
+
+  <!-- LAYER 3 — FINANCIAL R2R -->
+  <rect x="28" y="799" width="808" height="160" rx="14" fill="none" stroke="rgba(0,0,0,0.38)" stroke-width="1.15" stroke-dasharray="5 3"/>
+  <text class="th" x="432" y="821" text-anchor="middle">3 · Financial layer — Record to Reconcile (R2R)</text>
+
+  <g>
+    <rect x="44" y="837" width="232" height="44" rx="8" class="c-gray-fill c-gray-stroke" stroke-width="1.15"/>
+    <text class="th c-gray-th" x="160" y="857" text-anchor="middle">Accounts payable</text>
+    <text class="ts c-gray-ts" x="160" y="873" text-anchor="middle">From purchase invoices</text>
+  </g>
+  <g>
+    <rect x="304" y="837" width="232" height="44" rx="8" class="c-gray-fill c-gray-stroke" stroke-width="1.15"/>
+    <text class="th c-gray-th" x="420" y="857" text-anchor="middle">Accounts receivable</text>
+    <text class="ts c-gray-ts" x="420" y="873" text-anchor="middle">From sales invoices</text>
+  </g>
+  <g>
+    <rect x="564" y="837" width="232" height="44" rx="8" class="c-gray-fill c-gray-stroke" stroke-width="1.15"/>
+    <text class="th c-gray-th" x="680" y="857" text-anchor="middle">Payments</text>
+    <text class="ts c-gray-ts" x="680" y="873" text-anchor="middle">Incoming &amp; outgoing</text>
+  </g>
+
+  <g>
+    <rect x="44" y="899" width="172" height="44" rx="8" class="c-gray-fill c-gray-stroke" stroke-width="1.15"/>
+    <text class="th c-gray-th" x="130" y="919" text-anchor="middle">GL postings</text>
+    <text class="ts c-gray-ts" x="130" y="935" text-anchor="middle">Journal entries</text>
+  </g>
+  <g>
+    <rect x="240" y="899" width="172" height="44" rx="8" class="c-gray-fill c-gray-stroke" stroke-width="1.15"/>
+    <text class="th c-gray-th" x="326" y="919" text-anchor="middle">Tax</text>
+    <text class="ts c-gray-ts" x="326" y="935" text-anchor="middle">GST / VAT ledgers</text>
+  </g>
+  <g>
+    <rect x="436" y="899" width="172" height="44" rx="8" class="c-gray-fill c-gray-stroke" stroke-width="1.15"/>
+    <text class="th c-gray-th" x="522" y="919" text-anchor="middle">Bank reconciliation</text>
+    <text class="ts c-gray-ts" x="522" y="935" text-anchor="middle">Statement matching</text>
+  </g>
+  <g>
+    <rect x="632" y="899" width="172" height="44" rx="8" class="c-gray-fill c-gray-stroke" stroke-width="1.15"/>
+    <text class="th c-gray-th" x="718" y="919" text-anchor="middle">Reporting</text>
+    <text class="ts c-gray-ts" x="718" y="935" text-anchor="middle">P&amp;L, BS, cash flow</text>
+  </g>
+</svg>
